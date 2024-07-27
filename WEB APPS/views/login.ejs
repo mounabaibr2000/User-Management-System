@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/login.css">
+</head>
+
+<body>
+
+    <% if (typeof error !=='undefined' ) { %>
+        <p style="color:red;">
+            <%= error %>
+        </p>
+        <% } %>
+            <form action="/login" method="post">
+                <h1>Login</h1>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+               
+                <button type="submit">Login</button>
+                <div class="account">
+                    <h6>Don't Have an Account?</h6>
+                    <a href="/signup">
+                        <h6>Create a New Account</h6>
+                    </a>
+
+
+                </div>
+
+                 <a href="/admin/login">Login as Admin</a>
+            </form>
+
+
+
+</body>
+
+</html>
